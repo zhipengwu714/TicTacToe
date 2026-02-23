@@ -30,5 +30,5 @@ export const Checker = (matrix) => {
 
 // Display winner message
 export const Winner = (type) => {
-    document.getElementById('winner').innerHTML = `Congratulations ${type} Got the W`
+    document.getElementById('winner').innerHTML = `Congratulations ${type} Wins!`
 }

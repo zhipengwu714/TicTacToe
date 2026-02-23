@@ -1,5 +1,6 @@
 // const board = document.querySelector(".gameboard");
 // const body = document.querySelector("body")
+import { Remove, Transpose, Dia, Checker, Winner } from "./utils.js";
 
 let my_arr = [
     [null,null,null],
@@ -43,7 +44,38 @@ function findwinner() {
     console.log("O is the winner");
     Winner('O')
   }
-}// let turnPlayer = 0;
+}
+
+sbutton.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let p1 = document.getElementById("p1").value;
+  let p2 = document.getElementById("p2").value;
+  document.getElementById("displayp1").innerHTML = `X = ${p1}<br>`;
+  document.getElementById("displayp2").innerHTML = `O = ${p2}`;
+  Remove("playerSubmit");
+});
+
+resetButton.addEventListener("click", (e) => {
+  // Clear all cell content
+  [...document.querySelectorAll("td")].forEach(
+    (tdDomElement) => (tdDomElement.innerHTML = "")
+  );
+ 
+  // Clear winner message
+  document.getElementById('winner').innerHTML = '';
+  
+  // Reset game state array
+  my_arr = [[null,null,null],
+            [null,null,null],
+            [null,null,null]];
+  
+  // Reset turn counter
+  count = 0;
+});
+
+
+
+// let turnPlayer = 0;
 
 // board.addEventListener("click",(e) => {
 //     e.stopPropagation();
