@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <div class="nameInput">
+        <form id="playerSubmit" class="playerSubmit">
+            <label for="playernameone">P1 Name</label>
+            <input type="text" id="p1" name="playernameone" placeholder="p1 name">
+
+            <label for="playernametwo">P2 Name</label>
+            <input type="text" id="p2" name="playernametwo" placeholder="p2 name">
+
+            <div>
+                <input class="submit" id="button" type="submit" value="Submit">
+            </div>
+        </form>
+        
+    </div>
+
+    <div class="nameInput">
+        <h3 id="displayp1"></h3><br>
+        <h3 id="displayp2"></h3>
+    </div>
+
+    <div id="nameDisplay">
+        <h1 id="winner"></h1>
+    </div>
+
+    <div class="gameboardContainer">
+        <table class="gameboard">
+            <tr>
+                <td id = "00"></td>
+                <td id = "01"></td>
+                <td id = "02"></td>
+            </tr>
+            <tr>
+                <td id = "10"></td>
+                <td id = "11"></td>
+                <td id = "12"></td>
+            </tr>
+            <tr>
+                <td id = "20"></td>
+                <td id = "21"></td>
+                <td id = "22"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="buttonContainer">
+        <button class="reset" id="button">Reset</button>
+    </div>
+
+    <script type="module" src = "app.js"></script>
+</body>
+</html>
